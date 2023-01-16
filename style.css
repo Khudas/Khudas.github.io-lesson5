@@ -1,0 +1,168 @@
+:root {
+  --size: 200px;
+  --border: 5px;
+  --gap: 30px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 50px 0 0;
+  background-attachment: fixed;
+}
+
+a {
+  position: relative;
+  display: block;
+  margin: 0 10px;
+  padding: 5px 10px;
+  color: black;
+  font-size: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.wrapper {
+  height: calc(var(--size) + var(--border) * 2);
+  margin: var(--gap);
+  background-color: gray;
+  border: var(--border) solid black;
+  float: left;
+  position: relative;
+}
+
+.wrapper--sm {
+  width: calc(var(--size) + var(--border) * 2);
+}
+
+.wrapper--lg {
+  width: calc(var(--size) * 2 + var(--border) * 2);
+}
+
+.block {
+  width: 50%;
+  height: 50%;
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.block--1 {
+  background-color: chartreuse;
+  top: 0;
+  left: 0;
+}
+
+.block--2 {
+  background-color: white;
+  top: 0;
+  left: 50%;
+}
+
+.block--3 {
+  background-color: black;
+  top: 50%;
+  left: 0;
+}
+
+.block--4 {
+  background-color: rgb(255, 0, 0);
+  top: 50%;
+  left: 50%;
+}
+
+.block--5 {
+  background-color: lightskyblue;
+  left: 0;
+  bottom: 0;
+  transform: translate(-80%, 50%);
+  z-index: -1;
+}
+
+.block--6 {
+  background-color: lightskyblue;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  z-index: 2;
+}
+
+.block--7 {
+  background-color: lightskyblue;
+  bottom: 0;
+  right: 0;
+  transform: translate(50%, 50%);
+}
+
+.block--in-lg {
+  width: 25%;
+}
+
+.block-lg {
+  position: absolute;
+  top: var(--gap);
+  right: var(--gap);
+  bottom: var(--gap);
+  left: var(--gap);
+  z-index: 1;
+  background-color: rgb(255, 0, 0);
+}
+
+.menu {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.menu__list {
+  flex-basis: 15%;
+  list-style: none;
+}
+
+.menu__connect {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.menu__incript {
+  padding: 20px;
+  background-color: pink;
+}
+
+.menu__link {
+  font-size: 25px;
+  color: purple;
+}
+
+.menu__img {
+  width: 95%;
+  padding: 20px;
+}
+
+.menu__connect:hover {
+  outline: 2px solid black;
+}
+
+.menu__connect:hover .menu__incript {
+  background-color: purple;
+}
+
+.menu__connect:hover .menu__link {
+  color: pink;
+}
+
+.home {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
